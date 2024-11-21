@@ -2,7 +2,7 @@
 
 ---
 
-This repository showcases various deep learning projects, including implementations of Generative Adversarial Networks (GANs) for artistic style transfer.
+This repository showcases various deep learning projects, including implementations of Generative Adversarial Networks (GANs) for artistic style transfer and CNN-based classification tasks for medical image analysis.
 
 ## Monet Style Transfer with GAN
 
@@ -38,6 +38,47 @@ Training involves alternating updates to the generators and discriminators, opti
 
 The trained model effectively generates images that closely resemble Monet's painting style when applied to new landscape photographs.
 
+---
+
+## Histopathologic Cancer Detection with CNN
+
+The `histopathologic-cancer-detection.ipynb` notebook explores the application of deep learning in medical image analysis for cancer detection.
+
+### Project Overview
+
+This project leverages a Convolutional Neural Network (CNN) to classify pathology images into two categories: presence or absence of tumor tissue.
+
+### Dataset
+
+The dataset consists of:
+- **Training Images**: Labeled pathology image patches provided in a train folder.
+- **Test Images**: Unlabeled pathology image patches for prediction.
+
+Images are preprocessed to a uniform size of 50x50 pixels and normalized for model training.
+
+### Model Architecture
+
+The CNN architecture includes:
+- **Convolutional Layers**: Extract spatial features from images.
+- **MaxPooling Layers**: Reduce feature map dimensions.
+- **Dense Layers with Dropout**: Improve generalization and prevent overfitting.
+
+The model is trained using the binary cross-entropy loss function, with early stopping and learning rate scheduling for optimization.
+
+### Training
+
+A subset of 100,000 training samples was used to manage memory constraints. The model achieved a public leaderboard score of **0.8961**, placing it at **825th**.
+
+### Results
+
+- **Training Accuracy**: ~85.5%
+- **Validation Accuracy**: ~82.5%
+- **Leaderboard Score**: 0.8961
+
+This project demonstrates the effectiveness of CNNs for medical image classification tasks and highlights the importance of preprocessing, regularization, and resource optimization.
+
+---
+
 ## Additional Projects
 
 This repository also includes other deep learning projects exploring various architectures and applications.
@@ -49,6 +90,8 @@ This repository also includes other deep learning projects exploring various arc
 - Keras
 - NumPy
 - Matplotlib
+- pandas
+- PIL
 
 ## Usage
 
@@ -56,34 +99,3 @@ This repository also includes other deep learning projects exploring various arc
 
    ```bash
    git clone https://github.com/mrprestegaard/Deep-Learning-Projects.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd Deep-Learning-Projects
-   ```
-
-3. Install the required packages:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Open the Jupyter notebook:
-
-   ```bash
-   jupyter notebook monet-deep-learning-gan.ipynb
-   ```
-
-5. Follow the instructions within the notebook to train the model and generate Monet-style images.
-
-## References
-
-- [CycleGAN Paper](https://arxiv.org/abs/1703.10593)
-- [TensorFlow Documentation](https://www.tensorflow.org/)
-- [Keras Documentation](https://keras.io/)
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. 
