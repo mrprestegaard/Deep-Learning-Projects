@@ -1,8 +1,49 @@
+Here's the updated README file reflecting the addition of the **RNN for NLP Disaster Tweet Classification** project:
+
+---
+
 # Deep Learning Projects
 
 ---
 
-This repository showcases various deep learning projects, including implementations of Generative Adversarial Networks (GANs) for artistic style transfer and CNN-based classification tasks for medical image analysis.
+This repository showcases various deep learning projects, including implementations of Generative Adversarial Networks (GANs) for artistic style transfer, CNN-based classification tasks for medical image analysis, and Recurrent Neural Networks (RNNs) for NLP disaster tweet classification.
+
+## RNN for NLP Disaster Tweet Classification
+
+The `RNN for NLP Disaster Tweet Classification.ipynb` notebook explores the use of Recurrent Neural Networks (RNNs) for text classification. Specifically, the project focuses on classifying tweets as either disaster-related or non-disaster-related.
+
+### Project Overview
+
+This project leverages NLP techniques and RNN-based architectures to analyze and classify tweets from the Kaggle "NLP Getting Started" competition dataset. 
+
+### Dataset
+
+The dataset consists of:
+- **Training Data**: Tweets labeled as either disaster-related (1) or non-disaster-related (0).
+- **Test Data**: Unlabeled tweets used for evaluation.
+
+### Model Architecture
+
+The model includes the following components:
+- **Embedding Layer**: Maps words into dense, low-dimensional vector representations.
+- **Bidirectional LSTM**: Captures sequential dependencies in both forward and backward directions for a better understanding of tweet context.
+- **Attention Mechanism**: Focuses on the most relevant parts of each tweet, improving classification accuracy.
+- **Dense Layers**: Extract high-level features and produce a binary classification output.
+
+The notebook also explores integrating sentiment analysis features, though results showed that sentiment features alone were insufficient to improve classification performance.
+
+### Results
+
+- **Initial Model Accuracy**: Achieved a public leaderboard score of **0.72172**.
+- **Second Model Performance**: Introduced sentiment features but resulted in a lower score of **0.56052**, highlighting the need for better feature integration.
+
+### Future Work
+
+- Experiment with pre-trained embeddings like GloVe or BERT.
+- Reintroduce attention mechanisms for feature relevance.
+- Perform hyperparameter tuning and experiment with ensemble models.
+
+---
 
 ## Monet Style Transfer with GAN
 
@@ -24,7 +65,6 @@ Both datasets are preprocessed to a uniform size of 256x256 pixels to facilitate
 ### Model Architecture
 
 The CycleGAN model consists of:
-
 - **Generators**: Two networks that learn to translate images between the photograph and Monet painting domains.
 - **Discriminators**: Two networks that distinguish between real and generated images in each domain.
 
@@ -99,3 +139,8 @@ This repository also includes other deep learning projects exploring various arc
 
    ```bash
    git clone https://github.com/mrprestegaard/Deep-Learning-Projects.git
+   ```
+
+---
+
+This revised README now reflects the addition of the **RNN for NLP Disaster Tweet Classification** project with appropriate context and details.
