@@ -1,4 +1,3 @@
-Here's the updated README file reflecting the addition of the **RNN for NLP Disaster Tweet Classification** project:
 
 ---
 
@@ -6,7 +5,40 @@ Here's the updated README file reflecting the addition of the **RNN for NLP Disa
 
 ---
 
-This repository showcases various deep learning projects, including implementations of Generative Adversarial Networks (GANs) for artistic style transfer, CNN-based classification tasks for medical image analysis, and Recurrent Neural Networks (RNNs) for NLP disaster tweet classification.
+This repository showcases various deep learning projects, including implementations of Generative Adversarial Networks (GANs) for artistic style transfer, CNN-based classification tasks for medical image analysis, and Recurrent Neural Networks (RNNs) for NLP disaster tweet classification and stock market prediction.
+
+## Stock Market Prediction with RNN-LSTM
+
+The `stock-market-prediction-rnn-ltsm.ipynb` notebook explores the application of Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks for time series forecasting, specifically for predicting stock market prices.
+
+### Project Overview
+
+This project uses deep learning to analyze historical stock data and predict future prices. By leveraging RNN-LSTM models, the project demonstrates the potential of sequential models in capturing temporal dependencies in financial data.
+
+### Dataset
+
+The dataset includes:
+- **Historical Stock Data**: Open, high, low, close, and volume data for a selected stock over a specific period.
+- Data is preprocessed to normalize values and split into training and testing sets.
+
+### Model Architecture
+
+The RNN-LSTM model comprises:
+- **Input Layer**: Processes sequential stock data.
+- **LSTM Layers**: Captures long-term dependencies in time series data.
+- **Dense Layers**: Outputs a single prediction for the stock price at the next time step.
+
+### Results
+
+The model achieves high accuracy in capturing trends and movements of stock prices, demonstrating the effectiveness of LSTM networks in time series prediction.
+
+### Future Work
+
+- Experiment with more complex architectures like Bidirectional LSTMs or GRUs.
+- Integrate external features such as market indicators or news sentiment.
+- Optimize hyperparameters and explore ensemble models.
+
+---
 
 ## RNN for NLP Disaster Tweet Classification
 
@@ -14,7 +46,7 @@ The `RNN for NLP Disaster Tweet Classification.ipynb` notebook explores the use 
 
 ### Project Overview
 
-This project leverages NLP techniques and RNN-based architectures to analyze and classify tweets from the Kaggle "NLP Getting Started" competition dataset. 
+This project leverages NLP techniques and RNN-based architectures to analyze and classify tweets from the Kaggle "NLP Getting Started" competition dataset.
 
 ### Dataset
 
@@ -29,8 +61,6 @@ The model includes the following components:
 - **Bidirectional LSTM**: Captures sequential dependencies in both forward and backward directions for a better understanding of tweet context.
 - **Attention Mechanism**: Focuses on the most relevant parts of each tweet, improving classification accuracy.
 - **Dense Layers**: Extract high-level features and produce a binary classification output.
-
-The notebook also explores integrating sentiment analysis features, though results showed that sentiment features alone were insufficient to improve classification performance.
 
 ### Results
 
