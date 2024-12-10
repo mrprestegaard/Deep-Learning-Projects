@@ -142,5 +142,3 @@ This repository also includes other deep learning projects exploring various arc
    ```
 
 ---
-
-This revised README now reflects the addition of the **RNN for NLP Disaster Tweet Classification** project with appropriate context and details.
